@@ -1,11 +1,11 @@
 package nl.aggenebbisj.util;
 
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.io.IOException;
-import java.util.Properties;
 
 /**
  * Class that extracts properties from the prop file.
@@ -32,7 +32,10 @@ public class PropertyLoader {
     if (props.getProperty("browser.platform") != null && !props.getProperty("browser.platform").equals("")) {
       capabilities.setPlatform(Platform.valueOf(props.getProperty("browser.platform")));
     }
-
+    if (props.getProperty("phantomjs.binary.path") != null && !props.getProperty("phantomjs.binary.path").equals("")) {
+      capabilities.setCapability("phantomjs.binary.path", props.getProperty("phantomjs.binary.path")); 
+    }
+    
     return capabilities;
   }
 
