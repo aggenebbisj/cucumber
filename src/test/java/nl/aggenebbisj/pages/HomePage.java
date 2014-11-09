@@ -13,12 +13,11 @@ import static org.openqa.selenium.support.How.TAG_NAME;
  */
 public class HomePage extends Page {
 
-  @FindBy(how = TAG_NAME, using = "h1")
-  @CacheLookup
-  public WebElement header;
+    @FindBy(how = TAG_NAME, using = "h1")
+    @CacheLookup
+    public WebElement header;
 
-  public HomePage(WebDriver webDriver) {
-    super(webDriver);
-  }
-
+    public HomePage(WebDriver webDriver) {
+        super(webDriver);
+    }
 }

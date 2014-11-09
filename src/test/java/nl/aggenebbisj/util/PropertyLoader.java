@@ -1,9 +1,5 @@
 package nl.aggenebbisj.util;
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 import java.io.IOException;
 import java.util.Properties;
 
